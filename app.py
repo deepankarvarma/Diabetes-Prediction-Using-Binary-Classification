@@ -1,11 +1,11 @@
 import pandas as pd
-from sklearn.linear_model import RidgeClassifier
+from sklearn.naive_bayes import GaussianNB
 import streamlit as st
 
 # Load the CSV file into a pandas dataframe
 st.set_page_config(page_title="Diabetes Prediction")
 df = pd.read_csv('diabetes2.csv')
-st.title("Diabetes Prediction Using Regression")
+st.title("Diabetes Prediction Using Classification")
 st.markdown(
          f"""
          <style>
@@ -29,7 +29,7 @@ dpf = st.number_input('Diabetes Pedigree Function')
 age = st.number_input('Age',step=1)
 
 # Use the model to make predictions on the user inputs
-model = RidgeClassifier()
+model = GaussianNB()
 model.fit(df.drop('Outcome', axis=1), df['Outcome'])
 prediction = model.predict([[pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, dpf, age]])
 

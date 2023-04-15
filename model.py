@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import RidgeClassifier
-from sklearn.metrics import classification_report
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
 import seaborn as sns 
 import matplotlib.pyplot as plt
 
@@ -9,22 +9,22 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('diabetes2.csv')
 
 # Making a count vs outcount plot to check the balance in data 
-sns.catplot(x="Outcome", kind="count", data=df, palette="Set2")
-plt.show()
+# sns.catplot(x="Outcome", kind="count", data=df, palette="Set2")
+# plt.show()
 
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(df.drop('Outcome', axis=1), df['Outcome'], test_size=0.2, random_state=42)
 
 # Create a linear regression model and fit it to the training data
-model = RidgeClassifier()
+model = GaussianNB()
 model.fit(X_train, y_train)
 
 # Use the model to make predictions on the testing data
 y_pred = model.predict(X_test)
 
 # Evaluate the accuracy of the model
-Classification_report = classification_report(y_test, y_pred)
-print(f"Classification Report:\n {Classification_report}")
+accuracy=accuracy_score(y_test, y_pred)
+print(f"Classification Accuracy:\n {accuracy}")
 
 data = [[5, 150, 33.7, 50, 150, 74, 0.5, 53]]
 
