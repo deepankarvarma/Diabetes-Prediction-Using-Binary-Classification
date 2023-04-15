@@ -1,6 +1,6 @@
 # Diabetes Prediction
 
-## THe repository contains code for building a model that finds relationship between the features and the associated outcome by the method of Regression.Used the Ridge Classifier for maximization of various categorical parameters.
+## THe repository contains code for building a model that finds relationship between the features and the associated outcome and classifies the patient as Diabetic or Non-Diabetic.
 
 ### Dataset Link :- https://www.kaggle.com/datasets/kandij/diabetes-dataset
 
