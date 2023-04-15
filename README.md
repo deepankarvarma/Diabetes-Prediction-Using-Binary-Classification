@@ -1,6 +1,6 @@
 # Diabetes Prediction
 
-## THe repository contains code for building a model that finds relationship between the features and the associated outcome and classifies the patient as Diabetic or Non-Diabetic.
+## The repository contains code for building a model that finds relationship between the features and the associated outcome and classifies the patient as Diabetic or Non-Diabetic.Used Gaussian Naive Bayes Classifier Model.
 
 ### Dataset Link :- https://www.kaggle.com/datasets/kandij/diabetes-dataset
 
