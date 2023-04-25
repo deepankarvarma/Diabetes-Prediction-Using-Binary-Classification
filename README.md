@@ -18,6 +18,7 @@ The code was written in Python 3. The following Python libraries are required:
 To run the code, simply run the `model.py` file. The code will load the diabetes dataset, split the data into training and testing sets, and create a Gaussian Naive Bayes classifier model. The model is then trained on the training data and used to predict the outcomes of the testing data. Finally, the accuracy of the model is evaluated and printed to the console.
 <br>
 To run the website, use the following command:<br>
+
  `streamlit run app.py`
  
  This will start the Streamlit server and open the website in your default web browser. From there, you can enter medical details about a patient and get a prediction about whether they are diabetic or non-diabetic.
